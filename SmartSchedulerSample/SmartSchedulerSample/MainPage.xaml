@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:smartscheduler="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents" 
+             xmlns:local="clr-namespace:SmartSchedulerSample"
+             x:Class="SmartSchedulerSample.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+
+    <smartscheduler:SfSmartScheduler x:Name="smartScheduler"
+                                         AppointmentsSource="{Binding Appointments}">
+        <smartscheduler:SfSmartScheduler.AssistViewSettings>
+            <smartscheduler:SchedulerAssistViewSettings SuggestedPrompts="{Binding SuggestedPrompts}"
+                                                    ShowAssistViewBanner="True">
+                <smartscheduler:SchedulerAssistViewSettings.AssistViewBannerTemplate>
+                    <DataTemplate>
+                        <Grid Margin="15" BackgroundColor="#E9EEFF">
+                            <Label Text="Hi! I'm your personalized assistant.&#10;How can I help you?"
+                                       HorizontalTextAlignment="Center" TextColor="#1C1B1F"
+                                       FontSize="16" FontAttributes="Bold"/>
+                        </Grid>
+                    </DataTemplate>
+                </smartscheduler:SchedulerAssistViewSettings.AssistViewBannerTemplate>
+            </smartscheduler:SchedulerAssistViewSettings>
+        </smartscheduler:SfSmartScheduler.AssistViewSettings>
+    </smartscheduler:SfSmartScheduler>
+
+</ContentPage>
