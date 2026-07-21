@@ -21,10 +21,10 @@ namespace SmartSchedulerSample
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
-
-            string key = "<MENTION-YOUR-KEY>";
+                        
             Uri azureEndPoint = new Uri("<MENTION-YOUR-URL>");
             string deploymentName = "<MENTION-YOUR-DEPLOYMENT-NAME>";
+            string key = "<MENTION-YOUR-KEY>";
 
             AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(azureEndPoint, new AzureKeyCredential(key));
             IChatClient azureChatClient = azureOpenAIClient.GetChatClient(deploymentName).AsIChatClient();
