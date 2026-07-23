@@ -5,12 +5,12 @@ This sample demonstrates how to get started with the .NET MAUI Smart Scheduler i
 ## Sample
 
 ```xaml
-    <smartscheduler:SfSmartScheduler x:Name="smartScheduler"
+    <smartScheduler:SfSmartScheduler x:Name="smartScheduler"
                                      AppointmentsSource="{Binding Appointments}">
-        <smartscheduler:SfSmartScheduler.AssistViewSettings>
-            <smartscheduler:SchedulerAssistViewSettings SuggestedPrompts="{Binding SuggestedPrompts}"
+        <smartScheduler:SfSmartScheduler.AssistViewSettings>
+            <smartScheduler:SchedulerAssistViewSettings SuggestedPrompts="{Binding SuggestedPrompts}"
                                                         ShowAssistViewBanner="True">
-                <smartscheduler:SchedulerAssistViewSettings.AssistViewBannerTemplate>
+                <smartScheduler:SchedulerAssistViewSettings.AssistViewBannerTemplate>
                     <DataTemplate>
                         <Grid Margin="15" BackgroundColor="#E9EEFF">
                             <Label Text="Hi! I'm your personalized assistant.&#10;How can I help you?"
@@ -18,10 +18,10 @@ This sample demonstrates how to get started with the .NET MAUI Smart Scheduler i
                                    FontSize="16" FontAttributes="Bold"/>
                         </Grid>
                     </DataTemplate>
-                </smartscheduler:SchedulerAssistViewSettings.AssistViewBannerTemplate>
-            </smartscheduler:SchedulerAssistViewSettings>
-        </smartscheduler:SfSmartScheduler.AssistViewSettings>
-    </smartscheduler:SfSmartScheduler>
+                </smartScheduler:SchedulerAssistViewSettings.AssistViewBannerTemplate>
+            </smartScheduler:SchedulerAssistViewSettings>
+        </smartScheduler:SfSmartScheduler.AssistViewSettings>
+    </smartScheduler:SfSmartScheduler>
 ```
 
 ## Requirements to run the demo
